@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing Git on Windows</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Git Installation Guide</h1>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Git is a powerful version control system used by developers worldwide. If you're looking to set up Git on your Windows machine, you have several options. This article will walk you through the most reliable and effective methods for installing Git on Windows, ensuring you stay up to date with the latest versions and updates.</p>
+
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>A Windows PC (Windows 7 or newer).</li>
+                <li>An internet connection to download the Git installer.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Table of Contents</h2>
+            <ol>
+                <li>Install Git using the Official Git for Windows Installer</li>
+                <li>Install Git Using Chocolatey Package Manager</li>
+                <li>Install Git Using Windows Subsystem for Linux (WSL)</li>
+                <li>Install Git via GitHub Desktop</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Method 1: Install Git using the Official Git for Windows Installer</h2>
+            <ol>
+                <li><strong>Download the Installer:</strong> Go to the <a href="https://git-scm.com/download/win" target="_blank">official Git website</a>. The download will start automatically for the latest version of Git for Windows. After the download is complete, run the .exe file.</li>
+                <li><strong>Select Editor & Adjust Path:</strong> Follow the prompts in the setup wizard. Choose a text editor, ensure Git is added to the PATH, and use default options for secure HTTPS communication.</li>
+                <li><strong>Complete the Installation:</strong> Click "Install" and allow the installation to finish. Verify installation by running <code>git --version</code> in Command Prompt or Git Bash.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Method 2: Install Git Using Chocolatey Package Manager</h2>
+            <ol>
+                <li><strong>Install Chocolatey:</strong> Open PowerShell as Administrator and run the following command:
+                    <pre>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</pre>
+                </li>
+                <li><strong>Install Git:</strong> Use the command <code>choco install git</code> to install Git.</li>
+                <li><strong>Verify Installation:</strong> Run <code>git --version</code> in Command Prompt or PowerShell to confirm the installation.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Method 3: Install Git Using Windows Subsystem for Linux (WSL)</h2>
+            <ol>
+                <li><strong>Install WSL:</strong> Open PowerShell as Administrator and run <code>wsl --install</code>. Restart your PC when prompted.</li>
+                <li><strong>Install Git within WSL:</strong> Open the WSL terminal and run the commands:
+                    <pre>
+sudo apt update
+sudo apt install git
+                    </pre>
+                </li>
+                <li><strong>Verify Installation:</strong> Use <code>git --version</code> in the WSL terminal.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Method 4: Install Git via GitHub Desktop</h2>
+            <ol>
+                <li><strong>Download GitHub Desktop:</strong> Visit the <a href="https://desktop.github.com/" target="_blank">GitHub Desktop website</a> and download the installer.</li>
+                <li><strong>Run the Installer:</strong> Follow the on-screen instructions to complete the installation.</li>
+                <li><strong>Verify Git Installation:</strong> Open GitHub Desktop or run <code>git --version</code> in Git Bash or Command Prompt.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Installing Git on Windows is a straightforward process, and you have multiple methods to choose from. Whether you prefer using an installer, a package manager like Chocolatey, or even WSL for a Linux-like experience, these methods ensure that you can quickly set up Git on your Windows PC.</p>
+            <p>Always make sure to keep your Git installation up to date for the latest features and security patches.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Happy Coding! &copy; 2025 DevStarter</p>
+    </footer>
+</body>
+</html>

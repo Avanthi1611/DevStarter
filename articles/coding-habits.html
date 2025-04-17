@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Standards and Best Practices to Follow</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coding Standards and Best Practices to Follow</h1>
+    <p>Last Updated: 17 April, 2025</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <p>Coding standards are a set of guidelines and best practices that developers follow while writing code. These standards cover various aspects such as naming conventions, code organization, indentation, commenting, error handling, and more. Consider coding standards as rules, techniques, and best practices to develop cleaner, more readable, and more efficient code with minimal error.</p>
+
+      <p>In this guide, we’ll explore <strong>why</strong> coding standards matter, <strong>how</strong> to follow best practices, and <strong>where</strong> to find resources to help you write clean, maintainable, and efficient code.</p>
+    </section>
+
+    <section>
+      <h2>Purpose of Having Coding Standards</h2>
+      <p>Coding standards play a crucial role in software development. Here’s why having coding standards matters:</p>
+      <ul>
+        <li><strong>Consistency</strong> – Ensures uniformity across codebases, making it easier for developers to read, understand, and maintain code.</li>
+        <li><strong>Readability</strong> – Enhances code readability, reducing errors and improving collaboration.</li>
+        <li><strong>Error Prevention</strong> – Helps catch common mistakes early, preventing bugs and improving code quality.</li>
+        <li><strong>Scalability</strong> – Ensures code can scale without becoming unwieldy or unmanageable.</li>
+        <li><strong>Cross-Team Collaboration</strong> – Facilitates collaboration among developers, even in large teams.</li>
+        <li><strong>Code Reviews</strong> – Provides clear criteria for code reviews, leading to more effective feedback.</li>
+        <li><strong>Efficient Maintenance</strong> – Simplifies debugging, refactoring, and maintenance tasks.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Coding Best Practices & Guidelines to Follow</h2>
+      <p>There are many coding best practices and guidelines provided to ensure that the code is clear, maintainable, and robust. Let’s discuss the major practices below:</p>
+
+      <h3>1. Choose Industry-Specific Coding Standards</h3>
+      <p>Coding best practices and standards vary depending on the industry a specific product is being built for. For example, MISRA C and C++ were written for the automotive industry and are considered the de-facto standards for building applications that emphasize safety.</p>
+      <p>Adhering to industry-specific coding standards in software engineering makes writing correct code that matches product expectations easier.</p>
+
+      <h3>2. Focus on Code Readability</h3>
+      <p>Readable code is easy to follow and optimizes space and time. Here are a few ways to achieve that:</p>
+      <ul>
+        <li>Write as few lines as possible.</li>
+        <li>Use appropriate naming conventions.</li>
+        <li>Segment blocks of code into paragraphs.</li>
+        <li>Use indentation to mark the beginning and end of control structures.</li>
+        <li>Use the DRY (Don’t Repeat Yourself) principle.</li>
+        <li>Avoid deep nesting.</li>
+        <li>Capitalize SQL special words and function names to distinguish them from table and column names.</li>
+        <li>Avoid long lines—blocks of lines should be horizontally short and vertically long.</li>
+      </ul>
+
+      <h3>3. Meaningful Names</h3>
+      <p>Choose meaningful names that convey the purpose of the variable or function. Consistent naming conventions enhance clarity and maintainability.</p>
+      <pre><code>const customerName = "John";</code></pre>
+      <p>Different naming conventions used in coding:</p>
+      <ul>
+        <li><strong>Camel Case</strong>: Used in JavaScript for variable and function names (e.g., <code>const userName = "Smith";</code>).</li>
+        <li><strong>Snake Case</strong>: Uses underscores to separate words (e.g., <code>const user_name = "Smith";</code>).</li>
+        <li><strong>Kebab Case</strong>: Similar to snake case but uses hyphens (e.g., <code>const user-name = "Smith";</code>).</li>
+        <li><strong>Pascal Case</strong>: Used for class names, with all words capitalized (e.g., <code>class Person {}</code>).</li>
+      </ul>
+
+      <h3>4. Avoid Using a Single Identifier for Multiple Purposes</h3>
+      <p>Assign a name to each variable that clearly describes its purpose. A single variable can’t be assigned multiple values or used for numerous functions, as it can cause confusion.</p>
+      <pre><code>function outerFunction() {
+  let count = 10;
+  function innerFunction() {
+    const count = 20;
+    console.log(count);
+  }
+  innerFunction();
+  console.log(count);
+}</code></pre>
+
+      <h3>5. Add Comments and Prioritize Documentation</h3>
+      <p>Comments serve as a form of documentation within the code, explaining the logic or purpose of specific sections.</p>
+      <pre><code>// TODO: Refactor this function for better performance
+function processItems(items) {
+  // existing logic...
+  items.sort((a, b) => a.value - b.value);
+  if (items.length === 0) {
+    console.warn("Empty items array!");
+  }
+}</code></pre>
+
+      <h3>6. Efficient Data Processing</h3>
+      <p>Modularize your code to make it more reusable and maintainable. Optimize your algorithms and data structures for better performance.</p>
+      <pre><code>function calculateTax(income) {
+  return income * 0.2;
+}</code></pre>
+
+      <h3>7. Effective Version Control and Collaboration</h3>
+      <p>Ensure all developers follow consistent coding techniques and use version control tools like Git.</p>
+
+      <h3>8. Effective Code Review and Refactoring</h3>
+      <p>Engage in code reviews and refactor your code to improve its structure and readability.</p>
+      <pre><code>// Before refactoring
+function calculateTotal(items) {
+  let total = 0;
+  for (const item of items) {
+    total += item.price;
+  }
+  return total;
+}
+
+// After refactoring
+function calculateTotal(items) {
+  return items.reduce((acc, item) => acc + item.price, 0);
+}</code></pre>
+
+      <h3>9. Try to Formalize Exception Handling</h3>
+      <p>Use try-catch blocks to handle exceptions and prevent program crashes.</p>
+      <pre><code>try {
+  const numerator = 10;
+  const denominator = 0;
+  const result = numerator / denominator;
+  console.log("Result:", result);
+} catch (error) {
+  console.error("Error:", error.message);
+}</code></pre>
+
+      <h3>10. Security and Privacy Considerations</h3>
+      <p>Ensure that data is handled securely and only necessary information is collected.</p>
+
+      <h3>11. Standardize Headers for Different Modules</h3>
+      <p>Ensure each module has consistent header documentation that includes module name, creator, and summary of functions.</p>
+
+      <h3>12. Turn Daily Backups into an Instinct</h3>
+      <p>Save your code daily to prevent data loss due to unexpected events.</p>
+
+      <h3>13. Closed vs. Open Standards</h3>
+      <p>When choosing standards, consider whether closed standards (e.g., MISRA) or open standards (e.g., CERT) are more suitable for your industry.</p>
+    </section>
+
+    <section>
+      <h2>How Code Quality Helps Follow Coding Standards & Best Practices</h2>
+      <p>Code quality plays a pivotal role in maintaining and following coding standards. It ensures that code is efficient, scalable, and easily maintainable.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crafted with Love by Devastarter &copy; 2025</p>
+  </footer>
+</body>
+</html>

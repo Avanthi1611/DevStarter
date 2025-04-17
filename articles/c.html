@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Getting Started with C</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      font-size: 0.95em;
+    }
+
+    iframe {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to C Installation Guide</h1>
+    <p>Last Updated: 15 April, 2025</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        C is a widely-used programming language developed in the 1970s by Dennis Ritchie. It’s well-known for offering low-level access to memory, making it an ideal choice for systems programming, embedded systems, and operating system development.
+      </p>
+      <p>
+        To begin writing and running C code, you have two options:
+      </p>
+      <ul>
+        <li>Use an <strong>Online IDE</strong> for quick and hassle-free compilation</li>
+        <li>Set up a <strong>local development environment</strong> on your system</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>1. Run C Code Online (Quick Start)</h2>
+      <p>
+        Online IDEs are perfect for beginners who want to try out C without setting up anything locally. One such option is:
+      </p>
+      <p>
+        ➤ <a href="https://ide.geeksforgeeks.org" target="_blank">GeeksforGeeks Online IDE</a> – Just paste your code and click run!
+      </p>
+      <p>You can even run code directly from many articles by clicking the play button in the corner of the code snippet.</p>
+
+      <h3>Sample Code</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Learning C at GeeksforGeeks");
+    return 0;
+}</code></pre>
+
+      <h3>Output</h3>
+      <pre><code>Learning C at GeeksforGeeks</code></pre>
+    </section>
+
+    <section>
+      <h2>2. Install C Locally</h2>
+      <p>
+        For full control and offline development, setting up C on your machine involves two key components:
+      </p>
+      <ul>
+        <li><strong>C Compiler:</strong> Translates your code into executable files</li>
+        <li><strong>Code Editor (IDE):</strong> Where you write and organize your code</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Installing GCC Compiler</h2>
+
+      <h3>On Linux</h3>
+      <p>Use the following terminal commands to install GCC on Debian-based systems:</p>
+      <pre><code>sudo apt update
+sudo apt install build-essential</code></pre>
+
+      <h3>On Windows</h3>
+      <p>Install GCC using MinGW:</p>
+      <ol>
+        <li>Download the MinGW installer</li>
+        <li>Run the installer and select the GCC package</li>
+        <li>Add <code>MinGW\bin</code> to your system’s PATH environment variable</li>
+      </ol>
+
+      <h3>On macOS</h3>
+      <p>Use Homebrew to install GCC:</p>
+      <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install gcc</code></pre>
+    </section>
+
+    <section>
+      <h2>4. Verify GCC Installation</h2>
+      <p>Once installed, open your terminal or command prompt and run:</p>
+      <pre><code>gcc --version</code></pre>
+      <p>If everything was installed correctly, you’ll see the GCC version info displayed.</p>
+    </section>
+
+    <section>
+      <h2>5. Installing a Code Editor (IDE)</h2>
+      <p>While many IDEs are available, <strong>Visual Studio Code (VS Code)</strong> is lightweight, powerful, and perfect for C development.</p>
+
+      <h3>Steps:</h3>
+      <ol>
+        <li>Download the installer for your OS from the <a href="https://code.visualstudio.com/download" target="_blank">official site</a></li>
+        <li>Install using default/recommended settings</li>
+      </ol>
+
+      <h3>Other IDE Options:</h3>
+      <ul>
+        <li>Atom Text Editor (Linux)</li>
+        <li>Xcode (macOS)</li>
+        <li>Code::Blocks (Windows/Linux)</li>
+        <li>Sublime Text (Windows)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Configure VS Code for C</h2>
+
+      <h3>Install Extensions</h3>
+      <ol>
+        <li>Open the Extensions tab in VS Code</li>
+        <li>Search and install: <strong>C/C++ Extension Pack</strong> and <strong>Code Runner</strong></li>
+      </ol>
+
+      <h3>Enable Terminal Input</h3>
+      <p>To allow user input during execution:</p>
+      <ol>
+        <li>Go to File → Preferences → Settings</li>
+        <li>Click Extensions tab</li>
+        <li>Search “Run in Terminal” and check the box</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>7. Run a “Hello World” Program</h2>
+      <p>Let’s test everything with a simple example:</p>
+      <ol>
+        <li>Open a folder where you’ll save your C files</li>
+        <li>Create a new file with a <code>.c</code> extension</li>
+        <li>Paste the following code:</li>
+      </ol>
+
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World");
+    return 0;
+}</code></pre>
+
+      <p>Save the file and press <code>Ctrl + Alt + N</code> to run it using Code Runner.</p>
+      <p>If you see "Hello World" printed in the terminal, you're all set!</p>
+    </section>
+
+    <section>
+      <h2>8. Conclusion</h2>
+      <p>
+        C is a powerful and foundational language that serves as the backbone for many modern technologies. Whether you use an online IDE for quick testing or set up a complete development environment on your system, you're now ready to begin writing and executing C programs.
+      </p>
+      <p>
+        As you continue learning, explore more about C syntax, functions, pointers, and memory management. Happy coding!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Happy Coding! &copy; 2025 Devastarter</p>
+  </footer>
+</body>
+</html>

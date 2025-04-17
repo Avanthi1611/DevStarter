@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Style Guides Across Languages</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Code Style Guides Across Programming Languages</h1>
+    <p>Last Updated: 17 April, 2025</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        When you first start learning to code, you may focus on simply making things work. But clean, consistent, and readable code is just as important. That’s where style guides come in—they're like the etiquette of programming. They help you write code that's easy to read, easy to maintain, and friendly for collaboration.
+      </p>
+    </section>
+
+    <section>
+      <h2>What Is a Code Style Guide?</h2>
+      <p>
+        A <strong>code style guide</strong> is a set of rules about how your code should look. It covers things like:
+      </p>
+      <ul>
+        <li>Naming conventions</li>
+        <li>Indentation and spacing</li>
+        <li>Line length</li>
+        <li>Comment usage</li>
+        <li>File organization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why Do Style Guides Matter?</h2>
+      <p>Here’s why style guides are important, even for beginners:</p>
+      <ul>
+        <li><strong>Readability:</strong> Clean code is easier to understand.</li>
+        <li><strong>Collaboration:</strong> Helps teams work together smoothly.</li>
+        <li><strong>Fewer bugs:</strong> Clear structure helps catch mistakes.</li>
+        <li><strong>Professionalism:</strong> Industry standard and open-source friendly.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Universal Style Principles</h2>
+      <ul>
+        <li><strong>Use Descriptive Names</strong>  
+          <br/>Bad: <code>x</code>, <code>doStuff()</code>  
+          <br/>Good: <code>studentList</code>, <code>calculateAverageGrade()</code>
+        </li>
+        <li><strong>Indent Consistently</strong> - Usually 2 or 4 spaces, not tabs.</li>
+        <li><strong>Keep Lines Short</strong> - Aim for under 80–100 characters.</li>
+        <li><strong>Use Comments Wisely</strong> - Explain the why, not just the what.</li>
+        <li><strong>Break Long Functions</strong> - Split large chunks of logic.</li>
+        <li><strong>Be Consistent</strong> - Stick to naming conventions and formatting.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Style Guide Examples by Language</h2>
+
+      <h3>1. Python (PEP 8)</h3>
+      <ul>
+        <li>4 spaces for indentation</li>
+        <li>Use <code>snake_case</code> for variables/functions</li>
+        <li>Line limit: 79 characters</li>
+      </ul>
+      <pre><code>def calculate_average(grades):
+    total = sum(grades)
+    return total / len(grades)</code></pre>
+
+      <h3>2. JavaScript (Airbnb Style Guide)</h3>
+      <ul>
+        <li>Use <code>const</code> / <code>let</code> (avoid <code>var</code>)</li>
+        <li><code>camelCase</code> naming</li>
+        <li>Use semicolons and single quotes</li>
+      </ul>
+      <pre><code>const calculateAverage = (grades) => {
+  const total = grades.reduce((a, b) => a + b, 0);
+  return total / grades.length;
+};</code></pre>
+
+      <h3>3. Java (Google Style Guide)</h3>
+      <ul>
+        <li><code>PascalCase</code> for classes, <code>camelCase</code> for variables</li>
+        <li>Always use braces</li>
+        <li>One class per file</li>
+      </ul>
+      <pre><code>public class GradeCalculator {
+    public static double calculateAverage(int[] grades) {
+        int total = 0;
+        for (int grade : grades) {
+            total += grade;
+        }
+        return (double) total / grades.length;
+    }
+}</code></pre>
+
+      <h3>4. C/C++ (Google/LLVM Style)</h3>
+      <ul>
+        <li>Use consistent casing</li>
+        <li>2 or 4 space indentation</li>
+        <li>Braces on the same line</li>
+      </ul>
+      <pre><code>double calculate_average(const std::vector&lt;int&gt;&amp; grades) {
+    int total = 0;
+    for (int grade : grades) {
+        total += grade;
+    }
+    return static_cast&lt;double&gt;(total) / grades.size();
+}</code></pre>
+
+      <h3>5. HTML/CSS</h3>
+      <ul>
+        <li>Lowercase tags and consistent indentation in HTML</li>
+        <li>Hyphen-case for class names in CSS</li>
+      </ul>
+      <pre><code>&lt;div class="task-list"&gt;
+  &lt;p class="task-item"&gt;Finish homework&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <pre><code>.task-list {
+  margin: 10px;
+}
+
+.task-item {
+  color: #333;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Helpful Tools</h2>
+      <ul>
+        <li><strong>Linters:</strong> ESLint, pylint, etc.</li>
+        <li><strong>Formatters:</strong> Prettier, Black</li>
+        <li><strong>Editor Settings:</strong> Auto-formatting, consistent tabs/spaces</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Final Thoughts</h2>
+      <p>
+        Writing code for humans is as important as writing it for machines. Style guides help you develop clarity, discipline, and professionalism in your code. Whether you're solo or part of a team, coding with consistent style is a habit that pays off long-term.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crafted with Love by Devastarter &copy; 2025</p>
+  </footer>
+</body>
+</html>

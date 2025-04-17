@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Python</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Python Installation Guide</h1>
+        <p>Last Updated: 15 April, 2025</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>If you’re beginning your journey into Python programming, setting up Python on your machine is the essential first step. This guide will walk you through the installation process for Windows, macOS, and Linux. Whether you’re installing it for the first time or updating to the latest version, we’ve got you covered.</p>
+            <p>Before we dive in, let’s understand a few key things about Python:</p>
+            <ul>
+                <li>Python is a popular, high-level, general-purpose programming language.</li>
+                <li>Each Python version is free and open-source under the GPL (General Public License).</li>
+                <li>You can download official releases from <a href="https://www.python.org" target="_blank">python.org</a>.</li>
+                <li>Most Linux distributions include a package manager that simplifies installation.</li>
+            </ul>
+        </section>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python for Beginners" frameborder="0" allowfullscreen></iframe>
+
+        <section>
+            <h2>1. Installing Python on Windows</h2>
+            <ol>
+                <li><strong>Visit the official Python website:</strong> Go to the <a href="https://www.python.org/downloads/" target="_blank">downloads page</a>.</li>
+                <li><strong>Select a version:</strong> Download the latest stable version (e.g., Python 3.13.2).</li>
+                <li><strong>Run the installer:</strong> Open the downloaded <code>.exe</code> file and ensure you check <strong>"Add Python to PATH"</strong>.</li>
+                <li><strong>Complete installation:</strong> Click “Install Now.” Once done, open the command prompt and type <code>python --version</code> to confirm the installation.</li>
+                <li><strong>Optional - Launch IDLE:</strong> Open the Python Shell (IDLE) from the Start Menu and try printing something like <code>Hello, Python!</code>.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>2. Installing Python on macOS</h2>
+            <ol>
+                <li><strong>Use Homebrew:</strong> Open Terminal and run: <code>brew install python3</code>.</li>
+                <li><strong>Verify installation:</strong> After installation, run <code>python3 --version</code> to check that Python was installed successfully.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>3. Installing Python on Linux</h2>
+            <p>Most Linux distributions come with Python pre-installed. To check if it’s available:</p>
+            <ul>
+                <li>Check Python 2: <code>python --version</code></li>
+                <li>Check Python 3: <code>python3 --version</code></li>
+            </ul>
+            <p>If you need to install or update Python, use the commands below (for Ubuntu-based systems):</p>
+            <pre>
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.13
+            </pre>
+            <p>To confirm installation:</p>
+            <code>python3.13 --version</code>
+        </section>
+
+        <section>
+            <h2>4. Installing Python Modules (Beginner Friendly)</h2>
+            <p>Python has a rich ecosystem of reusable code packages called “modules” or “libraries.” You can use pip (Python’s package installer) to easily install them.</p>
+
+            <h3>What is pip?</h3>
+            <p><strong>pip</strong> is the default package manager for Python 3.4 and above.</p>
+
+            <h3>Basic pip usage</h3>
+            <ul>
+                <li><code>pip install package</code> – Installs the package</li>
+                <li><code>pip install "package>=1.0.0"</code> – Installs a specific or newer version</li>
+                <li><code>pip install --upgrade package</code> – Updates an installed package</li>
+                <li><code>pip install --user package</code> – Installs for your user account only</li>
+            </ul>
+
+            <h3>Creating a Virtual Environment</h3>
+            <p>To isolate dependencies per project:</p>
+            <code>python -m venv myenv</code>
+            <p>Then activate it:</p>
+            <ul>
+                <li>Windows: <code>myenv\Scripts\activate</code></li>
+                <li>macOS/Linux: <code>source myenv/bin/activate</code></li>
+            </ul>
+
+            <h3>Having Multiple Python Versions?</h3>
+            <p>If multiple versions exist on your machine, specify which one to use:</p>
+            <ul>
+                <li><code>python3 -m pip install package</code></li>
+                <li><code>py -3.9 -m pip install package</code> (on Windows)</li>
+            </ul>
+
+            <h3>pip Not Found?</h3>
+            <p>If pip isn’t installed, use this command:</p>
+            <code>python -m ensurepip --default-pip</code>
+
+            <h3>Advanced Packages</h3>
+            <p>For packages like NumPy, Pandas, or Matplotlib, consider using <a href="https://www.anaconda.com/" target="_blank">Anaconda</a> — a Python distribution designed for scientific computing.</p>
+        </section>
+
+        <section>
+            <h2>5. Conclusion</h2>
+            <p>Setting up Python on Windows, macOS, or Linux is a beginner-friendly process that enables you to begin writing and running Python code in no time. Whether you used an installer, Homebrew, or terminal commands, you now have a fully working Python environment.</p>
+            <p>Always remember to verify your installation using the version command in your terminal or command prompt. If something doesn’t work as expected, the official Python documentation is your best friend.</p>
+            <p>With Python successfully installed, you’re ready to dive into the world of coding and start building awesome projects. Good luck and happy coding!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Happy Coding! &copy; 2025 Devastarter</p>
+    </footer>
+</body>
+</html>

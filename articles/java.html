@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Java</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Java Installation Guide</h1>
+        <p>Last Updated: 15 April, 2025</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Java is a versatile programming language widely used for building applications. To start coding in Java, you first need to install the Java Development Kit (JDK) on your system. This article provides detailed steps for installing Java on Windows 7, 8, 10, 11, Linux Ubuntu, and macOS.</p>
+        </section>
+
+        <section>
+            <h2>Download and Install Java &ndash; Windows Operating System</h2>
+            <ol>
+                <li><strong>Visit the official Oracle website:</strong> Go to <a href="https://www.oracle.com/in/java/" target="_blank">Oracle's Java page</a> and click on the "Download Java" icon.</li>
+                <li><strong>Download JDK 23:</strong> Select the Windows x64 Installer option to download the <code>.exe</code> file for 64-bit Windows OS.</li>
+                <li><strong>Run the installer:</strong> Double-click on the downloaded <code>.exe</code> file and follow the installation wizard. Ensure you set the environment variables as per the guide.</li>
+                <li><strong>Verify the installation:</strong> Open the command prompt and type <code>java --version</code> to confirm.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Download and Install Java &ndash; Linux</h2>
+            <ol>
+                <li><strong>Visit the Oracle website:</strong> Download the Linux version of the JDK as a <code>.tar.gz</code> file.</li>
+                <li><strong>Extract the file:</strong> Use the command <code>tar -xvzf jdk-23_linux-x64_bin.tar.gz</code> and move it to the <code>/opt</code> directory.</li>
+                <li><strong>Set environment variables:</strong> Edit the shell configuration file (e.g., <code>.bashrc</code>) to include the <code>JAVA_HOME</code> and update the <code>PATH</code>.</li>
+                <li><strong>Verify installation:</strong> Run <code>java --version</code> to check the installed version.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Download and Install Java &ndash; macOS</h2>
+            <ol>
+                <li><strong>Visit the Oracle website:</strong> Download the macOS version as a <code>.dmg</code> file and install it.</li>
+                <li><strong>Set environment variables:</strong> Edit the shell configuration file (e.g., <code>.zshrc</code>) to set <code>JAVA_HOME</code> and update the <code>PATH</code>.</li>
+                <li><strong>Verify installation:</strong> Open the terminal and type <code>java --version</code> to confirm.</li>
+            </ol>
+        </section>
+
+        <footer>
+            <p>Happy Coding! &copy; 2025 DevStarter</p>
+        </footer>
+    </main>
+</body>
+</html>

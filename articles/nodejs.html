@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Java</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Node.js Installation Guide</h1>
+        <p>Last Updated: 15 April, 2025</p>
+    </header>
+
+    <main class="container">
+        <section id="introduction">
+            <p>Installing Node.js on Windows is a straightforward process, but it’s essential to follow the right steps to ensure smooth setup and proper functioning of Node Package Manager (NPM), which is crucial for managing dependencies and packages. This guide will walk you through the official site, NVM, Windows Subsystem, and Package Manager for Windows 7, 8, 10, and 11.</p>
+        </section>
+
+        <section id="prerequisites">
+            <h2>Prerequisites for Installing Node.js on Windows</h2>
+            <ul>
+                <li>Windows OS: Windows 7 or later</li>
+                <li>Administrator Rights: Required for installation</li>
+                <li>Internet Connection: Stable connection for downloading</li>
+                <li>Windows Installer: Latest version for smooth installation</li>
+                <li>Text Editor/IDE: Visual Studio Code or similar</li>
+                <li>Basic Command Line Knowledge: CMD or PowerShell familiarity</li>
+                <li>Disk Space: At least 100 MB of free space</li>
+                <li>Hardware Requirements: Minimum 2 GB RAM and 1 GHz processor</li>
+            </ul>
+        </section>
+
+        <section id="method1">
+            <h2>Method 1: Use the Official Website</h2>
+            <ol>
+                <li>
+                    <strong>Step 1: Download Node.js Installer</strong>
+                    <p>Visit the official Node.js website to download the Node.js ‘.msi’ installer based on your system architecture (32-bit or 64-bit). The LTS version is recommended for stability.</p>
+                </li>
+                <li>
+                    <strong>Step 2: Run the Installer</strong>
+                    <p>Locate the downloaded file and follow the setup wizard. Ensure you install npm and native modules.</p>
+                </li>
+                <li>
+                    <strong>Step 3: Finish Setup and Install Node.js and NPM</strong>
+                    <p>Complete the installation and verify by running <code>node -v</code> and <code>npm -v</code> in Command Prompt or PowerShell.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="method2">
+            <h2>Method 2: Install Node.js using NVM</h2>
+            <ol>
+                <li>
+                    <strong>Step 1: Install NVM for Windows</strong>
+                    <p>Download the NVM installer from GitHub and follow the instructions.</p>
+                </li>
+                <li>
+                    <strong>Step 2: Install Node.js and NPM</strong>
+                    <p>Use <code>nvm install latest</code> or specify a version, e.g., <code>nvm install 14.17.6</code>.</p>
+                </li>
+                <li>
+                    <strong>Step 3: Verify Node Installation</strong>
+                    <p>Run <code>node -v</code> to check the installed version.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="method3">
+            <h2>Method 3: Use Windows Subsystem (WSL)</h2>
+            <ol>
+                <li>
+                    <strong>Step 1: Open PowerShell</strong>
+                    <p>Run PowerShell as Administrator and install WSL.</p>
+                </li>
+                <li>
+                    <strong>Step 2: Set up a Linux Distribution</strong>
+                    <p>Launch a Linux app like Ubuntu and set up your environment.</p>
+                </li>
+                <li>
+                    <strong>Step 3: Install Node.js and NPM via apt</strong>
+                    <p>Run <code>sudo apt install nodejs npm</code> to install Node.js and NPM.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="method4">
+            <h2>Method 4: Install Node.js & NPM using WPM</h2>
+            <ol>
+                <li>
+                    <strong>Step 1: Open PowerShell as Administrator</strong>
+                    <p>Right-click on the Start Menu and select Windows PowerShell (Admin).</p>
+                </li>
+                <li>
+                    <strong>Step 2: Run the Installation Command</strong>
+                    <p>Use <code>winget install OpenJS.NodeJS</code> to install Node.js.</p>
+                </li>
+                <li>
+                    <strong>Step 3: Verify Installation for Node.js and NPM</strong>
+                    <p>Check the installation by running <code>node -v</code> and <code>npm -v</code>.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Installing Node.js and NPM on Windows is crucial for developers working in JavaScript and server-side applications. By managing your packages with NPM, you can streamline your development process and maintain your projects efficiently.</p>
+        </section>
+
+        <footer>
+            <p>Happy Coding! &copy; 2025 DevStarter</p>
+        </footer>
+    </main>
+</body>
+</html>

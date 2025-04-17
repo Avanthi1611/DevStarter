@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Branching Strategies</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Git Branching Strategies</h1>
+        <p>Last Updated: 16 April, 2025</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Branches in Git allow developers to work independently on features without impacting the main codebase. This separation enhances collaboration and code integration efficiency. In this guide, we’ll explore various Git branching models, their benefits, and best practices for implementation.</p>
+        </section>
+
+        <section>
+            <h2>Key Concepts</h2>
+            <ul>
+                <li><strong>Git Branch:</strong> A separate line of development within a Git repository.</li>
+                <li><strong>Main Branch:</strong> The production-ready branch, previously called master.</li>
+                <li><strong>Feature Branch:</strong> A temporary branch for developing a specific feature.</li>
+                <li><strong>Merge:</strong> Combining changes from one branch into another.</li>
+                <li><strong>Pull Request (PR):</strong> A request to merge code into a shared branch, commonly used for code review.</li>
+                <li><strong>CI/CD:</strong> Continuous Integration and Continuous Deployment pipelines for automating builds, testing, and deployment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What is a Branching Strategy?</h2>
+            <p>A Git branching strategy outlines how development teams manage, integrate, and deploy code. It helps maintain a clean, organized repository and minimizes merge conflicts during collaboration. A well-defined strategy ensures consistent workflow and efficient DevOps practices.</p>
+        </section>
+
+        <section>
+            <h2>Why Branching Strategies Matter</h2>
+            <p>By applying a structured approach to Git branching, teams can avoid conflicts, streamline collaboration, and support faster release cycles. It allows developers to work in parallel, maintain code quality, and reduce disruption in shared projects.</p>
+        </section>
+
+        <section>
+            <h2>Creating and Managing Branches</h2>
+            <ol>
+                <li><strong>Create a branch:</strong> <code>git branch new-feature</code></li>
+                <li><strong>Switch to the branch:</strong> <code>git checkout new-feature</code></li>
+                <li><strong>Create and switch at once:</strong> <code>git checkout -b new-feature</code></li>
+                <li><strong>Check active branch:</strong> <code>git branch</code></li>
+                <li><strong>Delete a branch:</strong> <code>git branch -d &lt;branch-name&gt;</code></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Popular Git Branching Strategies</h2>
+
+            <h3>1. GitFlow</h3>
+            <p>GitFlow structures development into multiple branches, ideal for large projects with scheduled releases. It defines roles for the <strong>master</strong>, <strong>develop</strong>, <strong>feature</strong>, <strong>release</strong>, and <strong>hotfix</strong> branches.</p>
+
+            <ul>
+                <li><strong>Master:</strong> Production-ready code</li>
+                <li><strong>Develop:</strong> Ongoing development</li>
+                <li><strong>Feature:</strong> New feature development</li>
+                <li><strong>Release:</strong> Prepares for production release</li>
+                <li><strong>Hotfix:</strong> Urgent fixes on live products</li>
+            </ul>
+
+            <strong>Pros:</strong>
+            <ul>
+                <li>Organized parallel development</li>
+                <li>Streamlined release and bug handling</li>
+                <li>Ideal for multi-versioned projects</li>
+            </ul>
+
+            <strong>Cons:</strong>
+            <ul>
+                <li>Increased complexity with many branches</li>
+                <li>Merge steps can be time-consuming</li>
+                <li>Not optimal for continuous deployment</li>
+            </ul>
+
+            <h3>2. GitHub Flow</h3>
+            <p>This is a simplified model perfect for smaller teams or web apps. It focuses on short-lived feature branches created from and merged back to the main branch (master).</p>
+
+            <strong>Pros:</strong>
+            <ul>
+                <li>Fast and agile development</li>
+                <li>Good for continuous delivery and integration</li>
+                <li>Simple and easy to manage</li>
+            </ul>
+
+            <strong>Cons:</strong>
+            <ul>
+                <li>Lacks development or staging branches</li>
+                <li>Master branch may get unstable if not tested well</li>
+                <li>Conflicts may arise with larger teams</li>
+            </ul>
+
+            <h3>3. GitLab Flow</h3>
+            <p>GitLab Flow merges the flexibility of GitFlow and the simplicity of GitHub Flow. It's designed for robust CI/CD, with branches for development, feature creation, and release prep.</p>
+
+            <ul>
+                <li><strong>Master:</strong> Stable production branch</li>
+                <li><strong>Develop:</strong> Development work</li>
+                <li><strong>Feature:</strong> Temporary branch for a specific change</li>
+                <li><strong>Release:</strong> Final stage before merging to master</li>
+            </ul>
+
+            <strong>Pros:</strong>
+            <ul>
+                <li>Great for larger teams</li>
+                <li>Supports clear separation between dev and production</li>
+                <li>Enables scalable feature development</li>
+            </ul>
+
+            <strong>Cons:</strong>
+            <ul>
+                <li>May be overwhelming for new users</li>
+                <li>Requires merging to develop before production</li>
+                <li>Can slow down release speed</li>
+            </ul>
+
+            <h3>4. Trunk-Based Development</h3>
+            <p>In this method, all developers commit directly to a single branch (often master or main). Feature flags are used to hide incomplete features. It’s focused on continuous integration and fast feedback.</p>
+
+            <strong>Pros:</strong>
+            <ul>
+                <li>Less merge conflicts</li>
+                <li>Faster, more frequent releases</li>
+                <li>Promotes team-wide visibility and collaboration</li>
+            </ul>
+
+            <strong>Cons:</strong>
+            <ul>
+                <li>Requires experienced developers</li>
+                <li>Challenging for large teams</li>
+                <li>May struggle with backward compatibility</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Choosing the Right Strategy</h2>
+            <p>The best strategy depends on your team size, release frequency, and workflow needs. Beginners may prefer simpler models like GitHub Flow or Trunk-Based Development. For structured releases, GitFlow or GitLab Flow is more suitable.</p>
+
+            <table border ="1" style="width:100%; text-align: center;">
+                <thead>
+                    <tr>
+                        <th>Project Type</th>
+                        <th>Team Size</th>
+                        <th>Recommended Strategy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Continuous Deployment</td>
+                        <td>Small</td>
+                        <td>GitHub Flow / Trunk-Based</td>
+                    </tr>
+                    <tr>
+                        <td>Scheduled Releases</td>
+                        <td>Medium</td>
+                        <td>GitFlow / GitLab Flow</td>
+                    </tr>
+                    <tr>
+                        <td>Frequent Feature Updates</td>
+                        <td>Medium</td>
+                        <td>GitLab Flow</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Effective branching strategies improve collaboration, code quality, and deployment efficiency. Choose a model that fits your team's needs and scale your approach as the project grows. A clear strategy leads to smoother development and successful product releases.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Crafted with love by Devastarter &copy; 2025</p>
+    </footer>
+</body>
+</html>

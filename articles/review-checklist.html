@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Checklist: Review and Best Practices</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Creating and Reviewing a Checklist Before Coding</h1>
+    <p>Last Updated: 17 April, 2025</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Starting your coding journey can feel overwhelming with so many concepts to grasp. But even experienced developers don’t just dive into code—they plan and review before and after. One key habit that boosts success is using a checklist. This guide helps you build that habit with actionable tips.
+      </p>
+    </section>
+
+    <section>
+      <h2>Why Use a Checklist?</h2>
+      <p>
+        Think of coding like baking a cake—you need a plan. A checklist helps you stay focused, avoid mistakes, and improve your workflow.
+      </p>
+      <ul>
+        <li>Stay organized and focused</li>
+        <li>Reduce errors and confusion</li>
+        <li>Save time and frustration</li>
+        <li>Build strong habits early on</li>
+        <li>Write higher-quality code</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pre-Coding Checklist</h2>
+      <h3>1. Understand the Problem</h3>
+      <p>Make sure you know what you're solving. Define inputs, outputs, and the goal.</p>
+
+      <h3>2. Break It Down</h3>
+      <p>Split the problem into smaller, manageable tasks. This is modular thinking.</p>
+
+      <h3>3. Choose Your Tools</h3>
+      <p>Pick the right language and tools. Ensure your setup is ready.</p>
+
+      <h3>4. Sketch or Pseudocode</h3>
+      <p>Plan your logic in plain English or rough visuals.</p>
+      <pre>
+If user adds a task:
+    Save the task to the list
+    Display it on the screen
+      </pre>
+
+      <h3>5. Set Up Your Project</h3>
+      <p>Create a clean folder structure for your files.</p>
+      <pre>
+my-todo-app/
+├── index.html
+├── style.css
+└── script.js
+      </pre>
+    </section>
+
+    <section>
+      <h2>While Coding: Review in Small Steps</h2>
+      <h3>6. Write Small Chunks</h3>
+      <p>Write a bit, then test. Avoid long blocks of code at once.</p>
+
+      <h3>7. Check for Syntax Errors</h3>
+      <p>Use a linter or watch out for common issues like missing brackets.</p>
+
+      <h3>8. Use Meaningful Names</h3>
+      <p>Make your variables and functions self-explanatory.</p>
+      <pre><code>// Bad
+let x = [];
+
+// Good
+let taskList = [];</code></pre>
+    </section>
+
+    <section>
+      <h2>Post-Coding Review</h2>
+      <h3>9. Test Thoroughly</h3>
+      <ul>
+        <li>Does it work for expected input?</li>
+        <li>Does it handle bad input?</li>
+        <li>Is the output correct?</li>
+      </ul>
+
+      <h3>10. Read Your Code Aloud</h3>
+      <p>This helps you spot logic issues and confusing names.</p>
+
+      <h3>11. Refactor</h3>
+      <p>Clean up code—shorter functions, clearer logic, reusable blocks.</p>
+
+      <h3>12. Add Smart Comments</h3>
+      <pre><code>// Good
+// Sort tasks by date
+tasks.sort((a, b) => b.date - a.date);
+
+// Bad
+// This is a variable
+let task = "Buy milk";</code></pre>
+
+      <h3>13. Get Feedback</h3>
+      <p>Ask peers or mentors for code reviews. Fresh eyes help!</p>
+
+      <h3>14. Use Version Control</h3>
+      <p>Use Git to track changes. GitHub is great for showcasing your work.</p>
+    </section>
+
+    <section>
+      <h2>Final Thoughts</h2>
+      <p>
+        A coding checklist is your personal guide to writing better code. It builds structure and confidence while helping you grow faster. Don’t skip it—embrace it. The habit of checking yourself will make your journey smoother and more rewarding.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crafted with love by Devastarter &copy; 2025</p>
+  </footer>
+</body>
+</html>
